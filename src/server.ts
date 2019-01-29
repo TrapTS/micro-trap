@@ -1,8 +1,17 @@
 import { send } from 'micro'
-import { router, get, AugmentedRequestHandler } from 'microrouter'
+import { router, get, AugmentedRequestHandler, ServerRequest, ServerResponse } from 'microrouter'
 
-const getHello: AugmentedRequestHandler = (req, res) => {
-  const data = {
+interface Hello {
+  status: string
+  data: ToWho
+}
+
+interface ToWho {
+  toWho: string
+}
+
+const getHello: AugmentedRequestHandler = (req: ServerRequest, res: ServerResponse) => {
+  const data: Hello = {
     status: 'ok',
     data: {
       toWho: req.params.toWho
