@@ -3,13 +3,20 @@
   "version": "1.0.0",
   "description": "Micro trap is base on micro, running in node.js v8 runtime.",
   "scripts": {
+    "build": "tsc",
+    "dev": "npm run build && micro build/server.js",
+    "format": "prettier --write \"**/*.ts\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/TrapTS/micro-trap.git"
   },
-  "keywords": ["ts", "micro", "trap"],
+  "keywords": [
+    "ts",
+    "micro",
+    "trap"
+  ],
   "author": "AlfieriChou",
   "license": "MIT",
   "bugs": {
@@ -25,6 +32,10 @@
     "tslint-plugin-prettier": "2.0.1"
   },
   "dependencies": {
+    "@types/micro": "^7.3.3",
+    "@types/microrouter": "^3.1.0",
+    "micro": "^9.3.3",
+    "microrouter": "^3.1.3",
     "reflect-metadata": "0.1.13",
     "typescript": "3.2.4"
   }
