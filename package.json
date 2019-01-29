@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Micro trap is base on micro, running in node.js v8 runtime.",
   "scripts": {
-    "build": "tsc",
+    "build": "tsc -p tsconfig.json",
     "dev": "npm run build && micro build/server.js",
     "format": "prettier --write \"**/*.ts\"",
     "test": "echo \"Error: no test specified\" && exit 1"
